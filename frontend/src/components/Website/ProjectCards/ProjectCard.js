@@ -15,12 +15,10 @@ import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "block",
-    transition: "all .35s linear",
-    boxShadow: " 0px 8px 9px 0px rgba(0,0,0,0.4)",
-    "&:hover": {
-      boxShadow: "-1px 10px 29px 0px rgba(0,0,0,0.8)"
-    }
+    width: 400,
+    m: 1,
+    "&:hover": { boxShadow: 5 },
+    cursor: "pointer",
   },
   media: {
     height: 430,
@@ -53,7 +51,7 @@ export default function ProjectCard(props) {
   };
 
   return (
-    <Card raised={hover} onMouseEnter={()=>setHover(!hover)} onMouseLeave={()=>setHover(!hover)}>
+    <Card className={styles.root} raised={hover} onMouseEnter={()=>setHover(!hover)} onMouseLeave={()=>setHover(!hover)}>
       <Tooltip arrow placement="bottom" title={<Typography>View project</Typography>}>
         {/*<CardActionArea onClick={isLoggedIn ? () => history.push('/' + shortName) : () => history.push('/login')}>*/}
         <CardActionArea onClick={() => history.push('/' + shortName)}>

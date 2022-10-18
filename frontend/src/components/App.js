@@ -4,16 +4,15 @@ import NavigationBar from "./Website/NavigationBar/NavigationBar";
 import Home from "./Website/Home/Home";
 import Login from "./Website/Login/Login";
 import AuthorizedRoute from "../assets/functions/AuthorizedRoute";
-import StudyCompass from "./Projects/StudyCompass/StudyCompass";
 import E3Selector from "./Projects/E3Selector/E3Selector";
 import Intogen from "./Projects/Intogen/Intogen";
 import Footer from "./Website/Footer/Footer";
 import Admin from "./Website/Admin/Admin";
 import Registration from "./Website/Registration/Registration";
 import CourseRecommender from "./Projects/CourseRecommender/CourseRecommender";
-import { Redirect, Route, Switch } from "react-router-dom";
-import { CssBaseline, Grid } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import {Redirect, Route, Switch} from "react-router-dom";
+import {CssBaseline, Grid} from "@material-ui/core";
+import {makeStyles} from "@material-ui/core/styles";
 import StudyCompassHomepage from "./Projects/UDEStudyCompass/StudyCompassHomepage";
 import Backend from "../assets/functions/Backend";
 import ProjectFinder from "./Projects/ProjectFinder/ProjectFinder";
@@ -35,58 +34,58 @@ export default function App() {
 
   return (
     <>
-      <CssBaseline />
-      <NavigationBar />
+      <CssBaseline/>
+      <NavigationBar/>
       <Switch>
         <Grid
           container
           direction="column"
-          style={{ position: "relative", minHeight: "83vh" }}
+          style={{position: "relative", minHeight: "83vh"}}
         >
-          <Route exact path="/" render={() => <Home classes={classes} />} />
+          <Route exact path="/" render={() => <Home classes={classes}/>}/>
           <Route
             exact
             path="/login"
-            render={() => <Login classes={classes} />}
+            render={() => <Login classes={classes}/>}
           />
           <Route
             exact
             path="/register"
-            render={() => <Registration classes={classes} />}
+            render={() => <Registration classes={classes}/>}
           />
           <Route
             exact
             path="/e3selector"
-            render={() => <E3Selector classes={classes} />}
+            render={() => <E3Selector classes={classes}/>}
           />
           <Route
             exact
             path="/intogen"
-            render={() => <Intogen classes={classes} />}
+            render={() => <Intogen classes={classes}/>}
           />
           <Route
             exact
             path="/course-recommender"
-            render={() => <CourseRecommender classes={classes} />}
+            render={() => <CourseRecommender classes={classes}/>}
           />
           <Route
             exact
             path="/studycompass"
-            render={() => <StudyCompassHomepage />}
+            render={() => <StudyCompassHomepage/>}
           />
           <Route
             exact
             path="/project-finder"
-            render={() => <ProjectFinder />}
+            render={() => <ProjectFinder/>}
           />
           <Route
             exact
             path="/student-connector"
-            render={() => <StudentConnector />}
+            render={() => <StudentConnector/>}
           />
 
           {!isLoggedIn ? (
-            <Route render={() => <Redirect to={{ pathname: "/" }} />} />
+            <Route render={() => <Redirect to={{pathname: "/"}}/>}/>
           ) : (
             <AuthorizedRoute
               isAuth={isLoggedIn}
@@ -95,11 +94,11 @@ export default function App() {
               classes={classes}
             />
           )}
-          <Route render={() => <Redirect to={{ pathname: "/" }} />} />
+          <Route render={() => <Redirect to={{pathname: "/"}}/>}/>
         </Grid>
       </Switch>
-      <Footer />
-      <ScrollToTop />
+      <Footer/>
+      <ScrollToTop/>
     </>
   );
 }

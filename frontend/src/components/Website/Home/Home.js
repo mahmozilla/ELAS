@@ -24,13 +24,13 @@ export default function Home() {
       }}
       />
       <Divider />
-      <Grid container spacing={2} style={{padding: 24}}>
+      <Grid container spacing={2} style={{padding: 24}} justify="center">
         {projectDetails.map((details, index) => {
           let nameToSearch = details.name.toLowerCase();
           const found = nameToSearch.includes(projectSearch);
           if (found) {
             return (
-              <Grid item xs={3} key={index}>
+              <Grid item key={index}>
                 <ProjectCard
                   name={details.name}
                   image={details.image}
