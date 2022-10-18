@@ -16,6 +16,8 @@ import { CssBaseline, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import StudyCompassHomepage from "./Projects/UDEStudyCompass/StudyCompassHomepage";
 import Backend from "../assets/functions/Backend";
+import ProjectFinder from "./Projects/ProjectFinder/ProjectFinder";
+import StudentConnector from "./Projects/StudentConnector/StudentConnector";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -54,11 +56,6 @@ export default function App() {
           />
           <Route
             exact
-            path="/studycompass"
-            render={() => <StudyCompass classes={classes} />}
-          />
-          <Route
-            exact
             path="/e3selector"
             render={() => <E3Selector classes={classes} />}
           />
@@ -74,8 +71,18 @@ export default function App() {
           />
           <Route
             exact
-            path="/ude-studycompass"
+            path="/studycompass"
             render={() => <StudyCompassHomepage />}
+          />
+          <Route
+            exact
+            path="/project-finder"
+            render={() => <ProjectFinder />}
+          />
+          <Route
+            exact
+            path="/student-connector"
+            render={() => <StudentConnector />}
           />
 
           {!isLoggedIn ? (

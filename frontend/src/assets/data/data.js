@@ -10,7 +10,7 @@ export const projectDetails = [
   {
     name: "Study Compass",
     image: "images/courseInsights.png",
-    shortName: "ude-studycompass",
+    shortName: "studycompass",
     teamMembers:
       "Kingson Chidubem Nwoke, Daniel Meier, Hakan Ok, Mengchen Li, Rana Nazire Karaca, Fatema Alagha, Mhd Ismail al Sayad",
     description:
@@ -25,16 +25,6 @@ export const projectDetails = [
     description:
       "The project aims to help students choose a suitable course from the E3 Module and provide insightful information that will help orientation and perhaps further specialization at the University of Duisburg-Essen. This project consists of powerful filtering, searching, and sorting capabilities to make it easy for the students to search for interesting courses that fit their needs.",
   },
-  // {
-  //   name: "Study Program Organization Assistant",
-  //   image: "images/spoa.png",
-  //   shortName: "spoa",
-  //   teamMembers: "Ilia Nassif, Deniz Glawenda",
-  //   github1: "https://github.com/ilia5/Study-Program-Organization-Assistant",
-  //   youtube: "https://www.youtube.com/watch?v=eRVgT8SM7EY",
-  //   deploy: "https://ilia5.github.io/",
-  //   description: "This tool was developed to help students decide which courses to pick in the upcoming semester. Also, it provides information about the courses and shows how the semester is shaping up. In the end, it gives the student the time table."
-  // },
   {
     name: "INTOGEN",
     image: "images/intogen.png",
@@ -47,15 +37,31 @@ export const projectDetails = [
     name: "Course Recommender",
     image: "images/recommendation.jpg",
     shortName: "course-recommender",
-    teamMembers: "Shoeb",
-    description: "No description",
+    teamMembers: "Shoeb Joarder, Jing Song",
+    description: "Recommendation of courses and study programs",
   },
-  // {
-  //   name: "studySoon",
-  //   image: "images/studySoon.png",
-  //   shortName: "studysoon",
-  //   description: "In this work we present studySoon, an interactive visualization tool that helps pupils to compare three study programs of the University of Duisburg Essen. By using several charts (pie chart, bar chart, etc.) coupled with user interactions (filter, hover, OnClick), we show how data visualization can be used effectively in the educational context."
-  // },
+  {
+    name: "Project Finder (Prodle)",
+    image: "images/prodle.png",
+    shortName: "project-finder",
+    teamMembers: "Jean Qussa, Nave Wibowo, Nurmalita Manggal",
+    github1: "https://github.com/cassandra-spark/prodle",
+    youtube: "https://youtu.be/hAC04dfojN0",
+    deploy: "https://prodle.herokuapp.com/",
+    description:
+      "The idea of the project was to develop an educational website for students to search for a suitable project for bachelor’s, master's, and personal projects as well as theses. This project allows students to also find for potential group members to work in a group",
+  },
+  {
+    name: "Student Connector (Studect)",
+    image: "images/studect.jpg",
+    shortName: "student-connector",
+    teamMembers:
+      "Osman Tasdelen, Ahmad Rifaee, Shahab Aldin Abbaszadeh, Oliver Fischer Fabian, Furkan Erbil",
+    github1: "https://github.com/SteveMelons/awt-bionweb-project",
+    youtube: "https://www.youtube.com/watch?v=0-iC3HUFw1k",
+    description:
+      "The idea of the project is to develop an social web application aimed to face the hardship in making new connections between students and finding group members for specific courses",
+  },
 
   // {
   //   name: "Insights into Course Evaluation by Interactive Data Visualization",

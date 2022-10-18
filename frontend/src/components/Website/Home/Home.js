@@ -4,9 +4,8 @@ import {Divider, Grid, InputAdornment, TextField} from "@material-ui/core";
 import {projectDetails} from "../../../assets/data/data";
 import SearchIcon from "@material-ui/icons/Search";
 
-export default function Home(props) {
+export default function Home() {
   const [projectSearch, setProjectSearch] = useState("");
-  const {classes} = props;
 
   const handleProjectSearch = (event) => {
     setProjectSearch(event.target.value);

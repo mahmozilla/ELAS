@@ -5,5 +5,5 @@ study_soon = Blueprint("study_soon", __name__)
 
 @study_soon.route("/home")
 @study_soon.route("/")
-def course_insights_home():
+def study_soon_home():
     return "Study Soon home"
