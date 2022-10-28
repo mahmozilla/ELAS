@@ -3,11 +3,14 @@ from flask_jwt_extended import create_access_token
 from .extensions import bcrypt
 from dotenv import load_dotenv
 import os
+import yaml
+from multiprocessing import Process
 load_dotenv()
 
 from orm_interface.entities.user import User
 from orm_interface.base import Base, Session, engine
 from orm_interface.entities.e3_entity.e3_courses import E3_Courses, E3_Rating
+from .scraper.scrape_control import run
 
 main = Blueprint("main", __name__)
 
@@ -84,11 +87,6 @@ def register():
 
 @main.route("/commence_scraping", methods=["GET", "POST"])
 def scrape():
-    import os
-    import yaml
-    from multiprocessing import Process
-    from .scraper.scrape_control import run
-
     with open(
         os.path.join(os.path.dirname(__file__), "scraper", "config.yaml"), "r"
     ) as file:
